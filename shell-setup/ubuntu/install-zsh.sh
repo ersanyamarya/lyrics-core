@@ -3,12 +3,15 @@ sudo apt-get install powerline fonts-powerline
 
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-## Create .zshrc file
+# Create .zshrc file
+cp ../.zshrc ~/
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # Syntax Hylighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
+# Auto Suggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ## Set zsh as default shell
 chsh -s $(which zsh)

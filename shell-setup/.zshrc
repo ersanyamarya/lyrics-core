@@ -32,6 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     zsh-syntax-highlighting
+    zsh-autosuggestions
     # dotenv
     git
     docker
