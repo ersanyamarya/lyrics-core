@@ -16,7 +16,7 @@ POWERLEVEL9K_RAM_FOREGROUND='gold3'
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \uf101 "
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon ram battery disk_usage)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon ram disk_usage battery)
 
 function sp {
     git branch > /dev/null 2>&1 || return 1
@@ -89,7 +89,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-User configuration
+# User configuration
 export PATH="$HOME/.scripts:$PATH"
 
 
@@ -102,5 +102,6 @@ fi
 alias please=sudo
 alias plz=sudo
 alias cat=batcat
-
-
+alias brewup=‘brew update; brew upgrade; brew cleanup; brew doctor’
+alias ubuntuup="sudo apt update -y && sudo apt upgrade -y && sudo apt install -f && sudo apt autoremove"
+alias zshconfig="code ~/.zshrc"
