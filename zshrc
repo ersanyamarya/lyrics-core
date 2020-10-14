@@ -100,6 +100,7 @@ fi
 
 # Alias
 alias please=sudo
+alias plz=sudo
 alias cat=batcat
 
 
