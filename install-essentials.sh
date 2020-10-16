@@ -41,6 +41,8 @@ if [ "$TARGET_OS" = 'Linux' ]; then
     
     sudo apt install firefox -y
     
+    sudo snap install postman
+    
     sudo apt install -f
     sudo apt autoremove
 fi
@@ -65,6 +67,8 @@ if [ "$TARGET_OS" = 'Mac' ]; then
     echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' &>> $HOME/.bashrc
     
     brew install golang
+    
+    brew cask install postman
     
     wget https://desktop.docker.com/mac/stable/Docker.dmg -P $HOME/Desktop
     echo "Install Docker from Desktop"

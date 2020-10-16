@@ -12,6 +12,10 @@ if [ "$TARGET_OS" = 'Linux' ]; then
     sudo apt install tmux -y
     sudo apt install bat -y
     
+    # shell scripts
+    mkdir $HOME/.scripts
+    cp -rf $PWD/shell-scripts/* $HOME/.scripts
+    
     # fonts
     mkdir $HOME/.fonts/
     cp $PWD/fonts/* $HOME/.fonts/
@@ -35,7 +39,8 @@ rm -rf $HOME/.oh-my-zsh
 rm $HOME/.zshrc
 
 # shell scripts
-cp -rf $PWD/shell-scripts $HOME/.scripts
+mkdir $HOME/.scripts
+cp -rf $PWD/shell-scripts/* $HOME/.scripts
 
 # oh-my-zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
