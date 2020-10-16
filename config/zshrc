@@ -102,6 +102,4 @@ fi
 alias please=sudo
 alias plz=sudo
 alias cat=batcat
-alias brewup=‘brew update; brew upgrade; brew cleanup; brew doctor’
-alias ubuntuup="sudo apt update -y && sudo apt upgrade -y && sudo apt install -f && sudo apt autoremove"
 alias zshconfig="code ~/.zshrc"

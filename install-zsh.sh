@@ -1,38 +1,13 @@
 #!/bin/sh
 
-# Imports
-. $PWD/bin/functions.sh
-
 # Function calls
+. $PWD/bin/functions.sh
 define_os
-
-if [ "$TARGET_OS" = 'Linux' ]; then
-    sudo apt install zsh -y
-    sudo apt-get install powerline -y
-    sudo apt install tmux -y
-    sudo apt install bat -y
-    
-    # fonts
-    mkdir $HOME/.fonts/
-    cp $PWD/fonts/* $HOME/.fonts/
-fi
-
-if [ "$TARGET_OS" = 'Mac' ]; then
-    brew cask install iterm2
-    brew install zsh
-    brew install python
-    pip install --user powerline-status
-    brew install tmux
-    brew install bat
-    
-    # fonts
-    cp $PWD/fonts/* $HOME/Library/Fonts/
-    
-fi
+. $PWD/bin/$TARGET_OS/$(basename $0)
 
 # shell scripts
 mkdir $HOME/.scripts
-cp -rf $PWD/lyrics-shell-scripts/$TARGET_OS* $HOME/.scripts
+cp -rf $PWD/lyrics-shell-scripts/$TARGET_OS/* $HOME/.scripts
 
 
 # clean clutter
@@ -56,7 +31,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 # .zshrc file
-cp $PWD/zshrc $HOME/.zshrc
+cp $PWD/config/zshrc $HOME/.zshrc
+cat $PWD/config/$TARGET_OS/zshrc &>> $HOME/.zshrc
 
 # Set zsh as default shell
 chsh -s $(which zsh)
