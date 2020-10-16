@@ -1,0 +1,3 @@
+[submodule "lyrics-shell-scripts"]
+	path = lyrics-shell-scripts
+	url = git@github.com:ersanyamarya/lyrics-shell-scripts.git

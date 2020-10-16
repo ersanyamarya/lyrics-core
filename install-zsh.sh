@@ -12,10 +12,6 @@ if [ "$TARGET_OS" = 'Linux' ]; then
     sudo apt install tmux -y
     sudo apt install bat -y
     
-    # shell scripts
-    mkdir $HOME/.scripts
-    cp -rf $PWD/shell-scripts/* $HOME/.scripts
-    
     # fonts
     mkdir $HOME/.fonts/
     cp $PWD/fonts/* $HOME/.fonts/
@@ -33,6 +29,11 @@ if [ "$TARGET_OS" = 'Mac' ]; then
     cp $PWD/fonts/* $HOME/Library/Fonts/
     
 fi
+
+# shell scripts
+mkdir $HOME/.scripts
+cp -rf $PWD/lyrics-shell-scripts/$TARGET_OS* $HOME/.scripts
+
 
 # clean clutter
 rm -rf $HOME/.oh-my-zsh
