@@ -39,6 +39,10 @@ sudo apt install brave-browser
 wget https://github.com/GitSquared/edex-ui/releases/download/v2.2.3/eDEX-UI-Linux-arm64.AppImage -P $HOME/Desktop
 echo "Install eDEX-UI from Desktop"
 
+
+wget https://linux.kite.com/dls/linux/current -P $HOME/Desktop
+echo "Install Kite from Desktop"
+
 # Install Postman
 sudo snap install postman
 

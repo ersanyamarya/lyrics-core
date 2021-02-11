@@ -1,2 +1,4 @@
 
 alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+alias pod="arch -x86_64 pod"
+alias brew="arch -x86_64 brew"

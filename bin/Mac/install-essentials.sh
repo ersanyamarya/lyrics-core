@@ -31,3 +31,6 @@ echo "Install eDEX-UI from Desktop"
 # Install docker desktop
 wget https://desktop.docker.com/mac/stable/Docker.dmg -P $HOME/Desktop
 echo "Install Docker from Desktop"
+
+wget https://alpha.kite.com/release/dls/mac/current -P $HOME/Desktop
+echo "Install Kite from Desktop"
