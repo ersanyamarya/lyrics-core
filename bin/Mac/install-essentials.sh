@@ -5,6 +5,8 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
+softwareupdate --install-rosetta
+
 brew install wget
 brew install curl
 
@@ -16,7 +18,7 @@ brew install --cask brave-browser
 
 # Install NodeJs
 brew install node
-echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' &>> $HOME/.bashrc
+echo 'export PATH="/usr/local/opt/node@14/bin:$PATH"' &>> $HOME/.bashrc
 
 brew install golang
 
@@ -25,12 +27,9 @@ brew cask install postman
 brew cask install eul
 
 # Install eDEX-UI
-wget https://github.com/GitSquared/edex-ui/releases/download/v2.2.3/eDEX-UI-macOS.dmg -P $HOME/Desktop
-echo "Install eDEX-UI from Desktop"
+# wget https://github.com/GitSquared/edex-ui/releases/download/v2.2.3/eDEX-UI-macOS.dmg -P $HOME/Desktop
+# echo "Install eDEX-UI from Desktop"
 
 # Install docker desktop
-wget https://desktop.docker.com/mac/stable/Docker.dmg -P $HOME/Desktop
+wget https://desktop.docker.com/mac/stable/arm64/Docker.dmg -P $HOME/Desktop
 echo "Install Docker from Desktop"
-
-wget https://alpha.kite.com/release/dls/mac/current -P $HOME/Desktop
-echo "Install Kite from Desktop"

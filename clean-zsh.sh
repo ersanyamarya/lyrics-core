@@ -9,7 +9,6 @@ define_os
 if [ "$TARGET_OS" = 'Linux' ]; then
     sudo apt purge --auto-remove zsh -y
     sudo apt purge --auto-remove powerline -y
-    sudo apt purge --auto-remove tmux -y
     sudo apt purge --auto-remove bat -y
 fi
 
